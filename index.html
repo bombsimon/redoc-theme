@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>ReDoc Theme</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css.css">
-</head>
-<body>
+  </head>
+  <body>
 
-<header>
-    <nav>
+    <header>
+      <nav>
         <ul>
-            <li class="active"><a href="docs/documentation.json">Documentation</a></li>
-            <li><a href="docs/petstore.json">Pet Store</a></li>
+          <li class="active"><a href="docs/documentation.json">Documentation</a></li>
+          <li><a href="docs/petstore.json">Pet Store</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<redoc spec-url="docs/documentation.json" scroll-y-offset="body > header > nav"></redoc>
+    <redoc spec-url="docs/documentation.json" scroll-y-offset="110"></redoc>
 
-<script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<script>
-    $("nav a").each(function () {
+    <script>
+      $("nav a").each(function () {
         $(this).click(function(e) {
-            e.preventDefault();
+          e.preventDefault();
 
-            Redoc.init(e.target.href, {showExtensions: true});
+          Redoc.init(
+            e.target.href, {
+              showExtensions: true
+            }
+          );
         })
-    });
+      });
 
-    $('li').click(function() {
+      $('li').click(function() {
         $('li').each(function() {
-            $(this).removeClass('active');
+          $(this).removeClass('active');
         });
 
         $(this).addClass('active');
-    });
-</script>
+      });
+    </script>
 
-</body>
+  </body>
 </html>
+
+<!-- vim: set ts=2 sw=2 et: -->
