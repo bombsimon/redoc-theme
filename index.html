@@ -21,28 +21,25 @@
     <redoc spec-url="docs/documentation.json" scroll-y-offset="110"></redoc>
 
     <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
-      $("nav a").each(function () {
-        $(this).click(function(e) {
+      document.querySelectorAll("nav a").forEach(function (link) {
+        link.addEventListener("click", function(e) {
           e.preventDefault();
 
-          Redoc.init(
-            e.target.href, {
-              showExtensions: true
-            }
-          );
+          // Remove active class fron all <li> and add to clicked parent.
+          removeAllBordersFromList();
+          link.parentElement.classList.add("active");
+
+          Redoc.init(e.target.href, {showExtensions: true});
         })
       });
 
-      $('li').click(function() {
-        $('li').each(function() {
-          $(this).removeClass('active');
+      function removeAllBordersFromList() {
+        document.querySelectorAll("li").forEach(function (element) {
+          element.classList.remove("active");
         });
-
-        $(this).addClass('active');
-      });
+      }
     </script>
 
   </body>
