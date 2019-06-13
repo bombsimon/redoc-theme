@@ -1,0 +1,19 @@
+{
+  "info": {
+    "termsOfService": "https://github.com/bombsimon/redoc-theme",
+    "description": "# redoc-theme\n\nThis is a repository with example of how to customize\n[ReDoc](https://github.com/Redocly/redoc) with a custom navigation bar.\n\n## Sidebar\n\nThe sidebar with titles will automatically be generated from the headers in this\nfile. Even the code blocks will be rendered properly.\n\n* Example bullets\n* That will be rendered nicely\n* From this theme\n\n```python\n#!/usr/bin/env python\n\ndef main():\n    \"\"\"\n    Print hello world to the screen\n    \"\"\"\n    print(\"Hello, World!\")\n\n\nif __name__ == '__main__':\n    main()\n```\n\n## Test this\n\nTo test this theme (or ReDoc at all) you need to host the files statically. The\neasiest way to do this is probably to start a simple server and use that.\n\n### Example\n\nBrowse to [localhost:8000](http://localhost:8000) after starting the server.\n\n```sh\npython3 -m http.server\n```\n\n## Screenshot\n\nThis is a screenshot of the server.\n\n![screenshot](assets/screenshot.png)\n",
+    "license": {
+      "url": "https://opensource.org/licenses/MIT",
+      "name": "MIT"
+    },
+    "title": "ReDoc Theme",
+    "version": "1.0",
+    "contact": {
+      "email": "simon@sawert.se"
+    },
+    "x-logo": {
+      "url": "assets/logo.png"
+    }
+  },
+  "swagger": "2.0"
+}

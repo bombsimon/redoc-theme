@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+redoc {
+    display: block;
+}
+
+redoc[spec-url] .redoc-wrap {
+    top: 110px !important;
+}
+
+/* Header and navigation */
+nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav > ul > li {
+    float: left;
+}
+
+nav > ul > li a {
+    display: block;
+    text-align: center;
+    padding: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+nav > ul > li:not(.active) {
+    border-top: 6px solid transparent;
+}
+
+nav > ul > li:hover:not(.active) {
+    border-top: 6px solid #fff;
+}
+
+nav > ul > .active {
+    border-top: 6px solid #fff;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ReDoc Theme</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li class="active"><a href="docs/documentation.json">Documentation</a></li>
+            <li><a href="docs/petstore.json">Pet Store</a></li>
+        </ul>
+    </nav>
+</header>
+
+<redoc spec-url="docs/documentation.json" scroll-y-offset="body > header > nav"></redoc>
+
+<script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+    $("nav a").each(function () {
+        $(this).click(function(e) {
+            e.preventDefault();
+
+            Redoc.init(e.target.href, {showExtensions: true});
+        })
+    });
+
+    $('li').click(function() {
+        $('li').each(function() {
+            $(this).removeClass('active');
+        });
+
+        $(this).addClass('active');
+    });
+</script>
+
+</body>
+</html>
